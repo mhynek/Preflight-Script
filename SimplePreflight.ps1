@@ -11,7 +11,6 @@ $email = $entry.EmailAddress
 Write-Host $email -foreground red
 $obj = New-Object PSObject
 $error.clear()
-$Move = $null
 $Message = $null
 New-MoveRequest -Remote -RemoteHostName mail.contoso.com -RemoteCredential $credential -Identity $email -TargetDeliveryDomain contoso.mail.onmicrosoft.com -BatchName "PreFlight" -WhatIf
 $Message= $Error[0].Exception.Message
